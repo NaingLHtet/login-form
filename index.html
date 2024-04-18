@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Login Form</title>
+    <script src="https://kit.fontawesome.com/df7f47a529.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="Main-con">
+     <div id="formCon">
+      <form id="loginForm" action="#">
+        <h1>Log In</h1>
+        <div class="inputCon">
+          <input type="text" class="name-input" required>
+          <div class="labeltext">User Name</div>
+        </div>
+        
+        <div class="inputCon">
+          <input type="password" class="psw" required>
+          <div class="labeltext">Password</div>
+          <i class="fa-solid fa-eye"></i>
+        </div>
+        
+        <div class="forgotpswCon">
+          <a href="#" class="forgot-psw">forgot your password?</a>
+        </div>
+      
+      <!-- button to submit the form-->
+        <div class="submit-btnCon">
+          <button type="submit" class="login-btn">Log In</button>
+        </div>
+      
+      <!-- add link to register page -->  
+        <div class="registerContainer">
+          You don't have an account?<a href="#" class="register">Register</a>
+        </div>
+        
+      </form>
+    </div>
+   </div>
+    
+   <script src="script.js"></script>
+  </body>
+  
+</html>

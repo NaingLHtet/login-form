@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Noto+Serif&family=Roboto&display=swap');
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh; /* 100% or fit-content */
+  background-color: #00001a;
+  font-family: "Roboto" , "Noto Serif","Dancing Script","Sans-Serif";
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* css for sign in form starts here */
+.Main-con {
+  display:flex;
+}
+
+#formCon {
+  width: 300px;
+  height: 400px;
+  background-color: #23242a;
+  border-radius: 15% 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+#formCon::before {
+  content: '';
+  width: 300px;
+  height: 400px;
+  background-image:linear-gradient(60deg, transparent, #45f3ff,#45f3ff);
+  position:absolute;
+  top: -50%;
+  left: -50%;
+  animation: animated 6s linear -3s infinite reverse;
+  transform-origin: bottom right;
+}
+
+#formCon::after {
+  content: '';
+  width: 300px;
+  height: 400px;
+  background-image:linear-gradient(60deg, transparent, #d9138a,#d9138a);
+  position:absolute;
+  top: -50%;
+  left: -50%;
+  animation: animated 6s linear infinite reverse;
+  transform-origin: bottom right;
+}
+
+@keyframes animated {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+#loginForm {
+  position: absolute;
+  inset: 3px;
+  background-color: #23242a;
+  border-radius: 15% 5px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loginForm h1 {
+  color: #45f3ff;
+  margin-top: 40px;
+}
+
+.inputCon {
+  width: 80%;
+  position:relative;
+  margin: 35px 0;
+}
+
+.inputCon input {
+  width:100%;
+  padding: 15px 10px;
+  color: #fff;
+  border: 1px solid #808080;
+  background: transparent;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  outline: none;
+  transition: 0.4s ease-in-out;
+  z-index: 100;
+}
+
+.labeltext {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  color: #fff;
+  padding: 0 5px;
+  background-color: #23242a;
+  transition: 0.3s ease-in-out;
+  user-select: none;
+}
+
+.inputCon i {
+  position:absolute;
+  color: #fff;
+  top: 18px;
+  right: 8px;
+  display: none;
+  z-index: 100;
+}
+
+
+
+
+.forgotpswCon {
+  width: 80%;
+  margin-top: 40px;
+}
+
+.forgot-psw {
+  font-size: 14px;
+  color: #fff;
+}
+
+
+
+
+.submit-btnCon {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.login-btn {
+  width: 100%;
+  border-radius: 30px;
+  background-image: linear-gradient(90deg,#45f3ff,#d9138a);
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}
+
+.inputCon input:focus,
+.inputCon input:valid {
+  border: 1px solid #45f3ff;
+}
+
+.inputCon input:focus + .labeltext,
+.inputCon input:valid + .labeltext {
+  color: #45f3ff;
+  transform: translate(-5px, -25px) scale(0.85);
+  z-index: 100;
+}
+
+
+
+
+.registerContainer {
+  margin-top: 20px;
+  color: #808080;
+  font-size: 12px;
+}
+
+.register {
+  color: #45f3ff;
+  margin-left: 5px;
+}
+
+#loginForm a {
+  text-decoration: none;
+}
+
+
+/* styling the alertbox */
+.alertBox {
+  width: 280px;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  margin-left: -140px;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 500;
+  font-weight: bold;
+}
+
+.notice {
+  padding: 5px;
+}
+
+.message {
+  padding: 20px 5px;
+}
+
+.okBtn {
+  margin: 10px;
+  text-align: right;
+  cursor: pointer;
+}
